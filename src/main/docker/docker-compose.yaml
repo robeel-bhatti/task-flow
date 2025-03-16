@@ -1,0 +1,16 @@
+name: task-flow
+
+services:
+  database:
+    image: postgres:latest
+    ports:
+      - "5432:5432"
+    volumes:
+      - task-flow-data:/var/lib/postgresql/data
+    environment:
+      POSTGRES_PASSWORD: admin
+      POSTGRES_USER: admin
+      POSTGRES_DB: task-flow-db
+
+volumes:
+  task-flow-data:
