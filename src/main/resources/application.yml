@@ -1,6 +1,17 @@
 spring:
   application:
     name: task-flow
+  profiles:
+    active: default
+  datasource:
+    url: jdbc:postgresql://localhost:5432/rb-data
+    username: admin
+    password: admin  # in real use-cases this should be an env var.
+    driver-class-name: org.postgresql.Driver
   liquibase:
     enabled: true
     change-log: classpath:/db/changelog/db.changelog-master.yaml
+  jpa:
+    hibernate:
+      ddl-auto: none
+    show-sql: true

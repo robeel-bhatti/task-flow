@@ -6,11 +6,11 @@ services:
     ports:
       - "5432:5432"
     volumes:
-      - task-flow-data:/var/lib/postgresql/data
+      - rb-data:/var/lib/postgresql/data
     environment:
       POSTGRES_PASSWORD: admin
       POSTGRES_USER: admin
-      POSTGRES_DB: task-flow-db
+      POSTGRES_DB: rb-data
 
 volumes:
-  task-flow-data:
+  rb-data:
