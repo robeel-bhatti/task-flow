@@ -1,0 +1,64 @@
+databaseChangeLog:
+  - changeSet:
+      author: Robeel Bhatti
+      id: 1
+      dbms: postgresql
+      changes:
+        - createTable:
+            catalogName: rb-data
+            schemaName: task_flow
+            tableName: titles
+            columns:
+              - column:
+                  name: title
+                  type: varchar(20)
+                  remarks: The name of the official job title.
+                  constraints:
+                    primaryKey: true
+                    validatePrimaryKey: true
+                    primaryKeyName: titles_pk
+
+              - column:
+                  name: description
+                  type: varchar(256)
+                  remarks: A brief description of the official job title.
+                  constraints:
+                    nullable: false
+                    notNullConstraintName: titles_description_nn
+                    validateNullable: true
+
+              - column:
+                  name: created_at
+                  type: datetime
+                  remarks: The datetime this record was created at.
+                  constraints:
+                    nullable: false
+                    notNullConstraintName: titles_created_at_nn
+                    validateNullable: true
+
+              - column:
+                  name: modified_at
+                  type: datetime
+                  remarks: The datetime this record was modified at.
+                  constraints:
+                    nullable: false
+                    notNullConstraintName: titles_modified_at_nn
+                    validateNullable: true
+
+              - column:
+                  name: created_by
+                  type: varchar(256)
+                  remarks: The user who created this record.
+                  constraints:
+                    nullable: false
+                    notNullConstraintName: titles_created_by_nn
+                    validateNullable: true
+
+              - column:
+                  name: modified_by
+                  type: varchar(256)
+                  remarks: The user who modified this record.
+                  constraints:
+                    nullable: false
+                    notNullConstraintName: titles_modified_by_nn
+                    validateNullable: true
