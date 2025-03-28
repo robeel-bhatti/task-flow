@@ -6,7 +6,7 @@ spring:
   datasource:
     url: jdbc:postgresql://localhost:5432/rb-data
     username: admin
-    password: admin  # in real use-cases this should be an env var.
+    password: admin
     driver-class-name: org.postgresql.Driver
   liquibase:
     enabled: true
