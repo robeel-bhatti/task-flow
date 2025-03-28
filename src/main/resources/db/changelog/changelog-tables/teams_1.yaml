@@ -1,0 +1,64 @@
+databaseChangeLog:
+  - changeSet:
+      author: Robeel Bhatti
+      id: 2
+      dbms: postgresql
+      changes:
+        - createTable:
+            catalogName: rb-data
+            schemaName: task_flow
+            tableName: teams
+            columns:
+              - column:
+                  name: team
+                  type: varchar(20)
+                  remarks: The name of the employee team.
+                  constraints:
+                    primaryKey: true
+                    validatePrimaryKey: true
+                    primaryKeyName: teams_pk
+
+              - column:
+                  name: description
+                  type: varchar(256)
+                  remarks: A brief description of the employee team.
+                  constraints:
+                    nullable: false
+                    notNullConstraintName: teams_description_nn
+                    validateNullable: true
+
+              - column:
+                  name: created_at
+                  type: datetime
+                  remarks: The datetime this record was created at.
+                  constraints:
+                    nullable: false
+                    notNullConstraintName: teams_created_at_nn
+                    validateNullable: true
+
+              - column:
+                  name: modified_at
+                  type: datetime
+                  remarks: The datetime this record was modified at.
+                  constraints:
+                    nullable: false
+                    notNullConstraintName: teams_modified_at_nn
+                    validateNullable: true
+
+              - column:
+                  name: created_by
+                  type: varchar(256)
+                  remarks: The user who created this record.
+                  constraints:
+                    nullable: false
+                    notNullConstraintName: teams_created_by_nn
+                    validateNullable: true
+
+              - column:
+                  name: modified_by
+                  type: varchar(256)
+                  remarks: The user who modified this record.
+                  constraints:
+                    nullable: false
+                    notNullConstraintName: teams_modified_by_nn
+                    validateNullable: true
