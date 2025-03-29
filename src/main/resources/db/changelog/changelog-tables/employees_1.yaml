@@ -1,0 +1,108 @@
+databaseChangeLog:
+  - changeSet:
+      author: Robeel Bhatti
+      id: 8
+      dbms: postgresql
+      changes:
+        - createTable:
+            catalogName: rb-data
+            schemaName: task_flow
+            tableName: employees
+            columns:
+              - column:
+                  name: id
+                  type: bigint
+                  remarks: The unique identifier of the employee.
+                  autoIncrement: true
+                  incrementBy: 1
+                  startWith: 1
+                  constraints:
+                    primaryKey: true
+                    validatePrimaryKey: true
+                    primaryKeyName: employees_pk
+              - column:
+                  name: name
+                  type: varchar(256)
+                  remarks: The name of the employee.
+                  constraints:
+                    nullable: false
+                    notNullConstraintName: employees_name_nn
+                    validateNullable: true
+              - column:
+                  name: address_id
+                  type: bigint
+                  remarks: The address where the employees resides. An employee must always have an address in the system.
+                  constraints:
+                    nullable: false
+                    notNullConstraintName: employees_address_id_nn
+                    validateNullable: true
+                    foreignKeyName: employees_address_fk
+                    referencedTableSchemaName: task_flow
+                    referencedTableName: addresses
+                    referencedColumnNames: id
+                    validateForeignKey: true
+              - column:
+                  name: manager_id
+                  type: bigint
+                  remarks: The unique identifier of the manager for this employee. Some employee may not have managers.
+                  constraints:
+                    foreignKeyName: employees_manager_fk
+                    referencedTableSchemaName: task_flow
+                    referencedTableName: employees
+                    referencedColumnNames: id
+                    validateForeignKey: true
+              - column:
+                  name: title
+                  type: varchar(20)
+                  remarks: The job title of the employee.
+                  constraints:
+                    nullable: false
+                    notNullConstraintName: employees_title_nn
+                    validateNullable: true
+                    foreignKeyName: employees_title_fk
+                    referencedTableSchemaName: task_flow
+                    referencedTableName: titles
+                    referencedColumnNames: title
+                    validateForeignKey: true
+              - column:
+                  name: team
+                  type: varchar(20)
+                  remarks: The team the employee belongs to. Some employees may not belong to teams.
+                  constraints:
+                    foreignKeyName: employees_team_fk
+                    referencedTableSchemaName: task_flow
+                    referencedTableName: teams
+                    referencedColumnNames: team
+                    validateForeignKey: true
+              - column:
+                  name: created_at
+                  type: datetime
+                  remarks: The datetime this record was created at.
+                  constraints:
+                    nullable: false
+                    notNullConstraintName: employees_created_at_nn
+                    validateNullable: true
+              - column:
+                  name: modified_at
+                  type: datetime
+                  remarks: The datetime this record was modified at.
+                  constraints:
+                    nullable: false
+                    notNullConstraintName: employees_modified_at_nn
+                    validateNullable: true
+              - column:
+                  name: created_by
+                  type: varchar(256)
+                  remarks: The user who created this record.
+                  constraints:
+                    nullable: false
+                    notNullConstraintName: employees_created_by_nn
+                    validateNullable: true
+              - column:
+                  name: modified_by
+                  type: varchar(256)
+                  remarks: The user who modified this record.
+                  constraints:
+                    nullable: false
+                    notNullConstraintName: employees_modified_by_nn
+                    validateNullable: true

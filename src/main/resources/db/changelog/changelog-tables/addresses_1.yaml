@@ -1,0 +1,94 @@
+databaseChangeLog:
+  - changeSet:
+      author: Robeel Bhatti
+      id: 6
+      dbms: postgresql
+      changes:
+        - createTable:
+            catalogName: rb-data
+            schemaName: task_flow
+            tableName: addresses
+            columns:
+              - column:
+                  name: id
+                  type: bigint
+                  remarks: The unique identifier of the address.
+                  autoIncrement: true
+                  incrementBy: 1
+                  startWith: 1
+                  constraints:
+                    primaryKey: true
+                    validatePrimaryKey: true
+                    primaryKeyName: addresses_pk
+              - column:
+                  name: street
+                  type: varchar(256)
+                  remarks: The street name of the employee's address.
+                  constraints:
+                    nullable: false
+                    notNullConstraintName: addresses_street_nn
+                    validateNullable: true
+              - column:
+                  name: country
+                  type: varchar(3)
+                  remarks: The country name of the employee's address.
+                  constraints:
+                    nullable: false
+                    notNullConstraintName: addresses_country_nn
+                    validateNullable: true
+              - column:
+                  name: zip
+                  type: varchar(10)
+                  remarks: The zip code of the employee's address.
+                  constraints:
+                    nullable: false
+                    notNullConstraintName: addresses_zip_nn
+                    validateNullable: true
+              - column:
+                  name: city
+                  type: varchar(256)
+                  remarks: The city of the employee's address.
+                  constraints:
+                    nullable: false
+                    notNullConstraintName: addresses_city_nn
+                    validateNullable: true
+              - column:
+                  name: state
+                  type: varchar(2)
+                  remarks: The state of the employee's address.
+                  constraints:
+                    nullable: false
+                    notNullConstraintName: addresses_state_nn
+                    validateNullable: true
+              - column:
+                  name: created_at
+                  type: datetime
+                  remarks: The datetime this record was created at.
+                  constraints:
+                    nullable: false
+                    notNullConstraintName: addresses_created_at_nn
+                    validateNullable: true
+              - column:
+                  name: modified_at
+                  type: datetime
+                  remarks: The datetime this record was modified at.
+                  constraints:
+                    nullable: false
+                    notNullConstraintName: addresses_modified_at_nn
+                    validateNullable: true
+              - column:
+                  name: created_by
+                  type: varchar(256)
+                  remarks: The user who created this record.
+                  constraints:
+                    nullable: false
+                    notNullConstraintName: addresses_created_by_nn
+                    validateNullable: true
+              - column:
+                  name: modified_by
+                  type: varchar(256)
+                  remarks: The user who modified this record.
+                  constraints:
+                    nullable: false
+                    notNullConstraintName: addresses_modified_by_nn
+                    validateNullable: true
