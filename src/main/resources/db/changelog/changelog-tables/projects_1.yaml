@@ -1,0 +1,118 @@
+databaseChangeLog:
+  - changeSet:
+      author: Robeel Bhatti
+      id: 7
+      dbms: postgresql
+      changes:
+        - createTable:
+            catalogName: rb-data
+            schemaName: task_flow
+            tableName: projects
+            columns:
+              - column:
+                  name: id
+                  type: bigint
+                  remarks: The unique identifier of the project.
+                  autoIncrement: true
+                  incrementBy: 1
+                  startWith: 1
+                  constraints:
+                    primaryKey: true
+                    validatePrimaryKey: true
+                    primaryKeyName: projects_pk
+              - column:
+                  name: name
+                  type: varchar(256)
+                  remarks: The name of the project.
+                  constraints:
+                    nullable: false
+                    notNullConstraintName: projects_name_nn
+                    validateNullable: true
+              - column:
+                  name: description
+                  type: varchar(256)
+                  remarks: The description of the project. May be null if not enough information is available at the time of project creation.
+              - column:
+                  name: team
+                  type: varchar(20)
+                  remarks: The team that is assigned to this project. May be null when a project has just been created but no team has been assigned yet.
+                  constraints:
+                    foreignKeyName: teams_fk
+                    referencedTableSchemaName: task_flow
+                    referencedTableName: teams
+                    referencedColumnNames: team
+                    validateForeignKey: true
+              - column:
+                  name: priority
+                  type: varchar(10)
+                  remarks: The priority of the project. May be null when a project has just been created but no priority has been given to it yet.
+                  constraints:
+                    foreignKeyName: priorities_fk
+                    referencedTableSchemaName: task_flow
+                    referencedTableName: priorities
+                    referencedColumnNames: priority
+                    validateForeignKey: true
+              - column:
+                  name: status
+                  type: varchar(20)
+                  remarks: The status of the project. May be null when a project has just been created but no status has been given to it yet.
+                  constraints:
+                    foreignKeyName: statuses_fk
+                    referencedTableSchemaName: task_flow
+                    referencedTableName: statuses
+                    referencedColumnNames: status
+                    validateForeignKey: true
+              - column:
+                  name: category
+                  type: varchar(20)
+                  remarks: The business category the project pertains to.
+                  constraints:
+                    foreignKeyName: categories_fk
+                    referencedTableSchemaName: task_flow
+                    referencedTableName: categories
+                    referencedColumnNames: category
+                    validateForeignKey: true
+              - column:
+                  name: created_at
+                  type: datetime
+                  remarks: The datetime this record was created at.
+                  constraints:
+                    nullable: false
+                    notNullConstraintName: projects_created_at_nn
+                    validateNullable: true
+              - column:
+                  name: modified_at
+                  type: datetime
+                  remarks: The datetime this record was modified at.
+                  constraints:
+                    nullable: false
+                    notNullConstraintName: projects_modified_at_nn
+                    validateNullable: true
+              - column:
+                  name: created_by
+                  type: varchar(256)
+                  remarks: The user who created this record.
+                  constraints:
+                    nullable: false
+                    notNullConstraintName: projects_created_by_nn
+                    validateNullable: true
+              - column:
+                  name: modified_by
+                  type: varchar(256)
+                  remarks: The user who modified this record.
+                  constraints:
+                    nullable: false
+                    notNullConstraintName: projects_modified_by_nn
+                    validateNullable: true
+              - column:
+                  name: started_at
+                  type: date
+                  remarks: The date that work had begun on the project.
+              - column:
+                  name: completed_at
+                  type: date
+                  remarks: The date that work had actually completed on the project.
+              - column:
+                  name: due_at
+                  type: date
+                  remarks: The date that the project must be completed by.
