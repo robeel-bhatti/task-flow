@@ -17,7 +17,6 @@ databaseChangeLog:
                     primaryKey: true
                     validatePrimaryKey: true
                     primaryKeyName: statuses_pk
-
               - column:
                   name: description
                   type: varchar(256)
@@ -26,7 +25,6 @@ databaseChangeLog:
                     nullable: false
                     notNullConstraintName: statuses_description_nn
                     validateNullable: true
-
               - column:
                   name: created_at
                   type: datetime
@@ -35,7 +33,6 @@ databaseChangeLog:
                     nullable: false
                     notNullConstraintName: statuses_created_at_nn
                     validateNullable: true
-
               - column:
                   name: modified_at
                   type: datetime
@@ -44,7 +41,6 @@ databaseChangeLog:
                     nullable: false
                     notNullConstraintName: statuses_modified_at_nn
                     validateNullable: true
-
               - column:
                   name: created_by
                   type: varchar(256)
@@ -53,7 +49,6 @@ databaseChangeLog:
                     nullable: false
                     notNullConstraintName: statuses_created_by_nn
                     validateNullable: true
-
               - column:
                   name: modified_by
                   type: varchar(256)
