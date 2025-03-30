@@ -1,0 +1,6 @@
+category,description,created_at,modified_at,created_by,modified_by
+General,Tasks that don’t fit into a specific category.,2025-03-30 12:00:00,2025-03-30 12:00:00,server,server
+Development,Software or product development tasks.,2025-03-30 12:00:00,2025-03-30 12:00:00,server,server
+Marketing,Tasks related to advertising and social media.,2025-03-30 12:00:00,2025-03-30 12:00:00,server,server
+Operations,Administrative and internal business process tasks.,2025-03-30 12:00:00,2025-03-30 12:00:00,server,server
+Finance,Tasks related to budgeting and financial planning.,2025-03-30 12:00:00,2025-03-30 12:00:00,server,server

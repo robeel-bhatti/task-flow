@@ -57,3 +57,13 @@ databaseChangeLog:
                     nullable: false
                     notNullConstraintName: teams_modified_by_nn
                     validateNullable: true
+  - changeSet:
+      author: Robeel Bhatti
+      id: teams_load_data
+      dbms: postgresql
+      changes:
+        - loadData:
+            schemaName: task_flow
+            tableName: teams
+            file: db/changelog/data/teams.csv
+            separator: ","

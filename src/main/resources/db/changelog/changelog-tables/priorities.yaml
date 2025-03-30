@@ -57,3 +57,13 @@ databaseChangeLog:
                     nullable: false
                     notNullConstraintName: priorities_modified_by_nn
                     validateNullable: true
+  - changeSet:
+      author: Robeel Bhatti
+      id: priorities_load_data
+      dbms: postgresql
+      changes:
+        - loadData:
+            schemaName: task_flow
+            tableName: priorities
+            file: db/changelog/data/priorities.csv
+            separator: ","
