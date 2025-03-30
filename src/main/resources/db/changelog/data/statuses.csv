@@ -1,0 +1,6 @@
+status,description,created_at,modified_at,created_by,modified_by
+To Do,Task is planned but not started,2025-03-30 03:38:10,2025-03-30 03:38:10,system,system
+In Progress,Task is currently being worked on,2025-03-30 03:38:10,2025-03-30 03:38:10,system,system
+Blocked,Task is stuck due to a dependency,2025-03-30 03:38:10,2025-03-30 03:38:10,system,system
+Completed,Task is finished,2025-03-30 03:38:10,2025-03-30 03:38:10,system,system
+Cancelled,Task was stopped before completion,2025-03-30 03:38:10,2025-03-30 03:38:10,system,system
