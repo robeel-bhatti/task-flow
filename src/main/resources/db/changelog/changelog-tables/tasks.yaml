@@ -123,3 +123,13 @@ databaseChangeLog:
                     nullable: false
                     notNullConstraintName: tasks_modified_by_nn
                     validateNullable: true
+  - changeSet:
+      author: Robeel Bhatti
+      id: tasks_load_data
+      dbms: postgresql
+      changes:
+        - loadData:
+            schemaName: task_flow
+            tableName: tasks
+            file: db/changelog/data/tasks.csv
+            separator: ","
