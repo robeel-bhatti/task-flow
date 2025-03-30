@@ -92,3 +92,13 @@ databaseChangeLog:
                     nullable: false
                     notNullConstraintName: addresses_modified_by_nn
                     validateNullable: true
+  - changeSet:
+      author: Robeel Bhatti
+      id: addresses_load_data
+      dbms: postgresql
+      changes:
+        - loadData:
+            schemaName: task_flow
+            tableName: addresses
+            file: db/changelog/data/addresses.csv
+            separator: ","

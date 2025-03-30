@@ -128,3 +128,13 @@ databaseChangeLog:
             columnDataType: date
             constraintName: projects_due_at_nn
             validate: true
+  - changeSet:
+      author: Robeel Bhatti
+      id: projects_load_data
+      dbms: postgresql
+      changes:
+        - loadData:
+            schemaName: task_flow
+            tableName: projects
+            file: db/changelog/data/projects.csv
+            separator: ","

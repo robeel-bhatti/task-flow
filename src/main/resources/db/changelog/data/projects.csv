@@ -1,0 +1,13 @@
+id,name,description,team,priority,status,category,created_at,modified_at,created_by,modified_by,started_at,completed_at,due_at
+1,Website Redesign,Revamping the company's main website.,Bravo,High,In Progress,Development,2025-03-30 12:00:00,2025-03-30 12:00:00,server,server,2025-03-15,,2025-04-15
+2,New CRM System,Developing a new customer relationship management system.,Alpha,High,To Do,Marketing,2025-03-28 10:00:00,2025-03-30 12:00:00,server,server,,,2025-06-30
+3,Social Media Strategy,Creating a social media marketing plan for Q2.,Charlie,Medium,In Progress,Marketing,2025-03-10 08:30:00,2025-03-30 12:00:00,server,server,2025-03-18,,2025-05-01
+4,Mobile App Development,Building a cross-platform mobile app.,Alpha,High,To Do,Development,2025-03-22 14:00:00,2025-03-30 12:00:00,server,server,,,2025-09-01
+5,Security Audit,Conducting a full security assessment of company systems.,Delta,Medium,In Progress,Operations,2025-03-15 09:45:00,2025-03-30 12:00:00,server,server,2025-03-20,,2025-06-15
+6,HR Onboarding Process,Streamlining the employee onboarding process.,Gamma,Low,Completed,Operations,2025-01-12 16:00:00,2025-03-30 12:00:00,server,server,2025-01-20,2025-03-10,2025-03-15
+7,AI Chatbot,Developing an AI-powered chatbot for customer support.,Foxtrot,Critical,In Progress,Development,2025-02-05 11:00:00,2025-03-30 12:00:00,server,server,2025-02-20,,2025-08-01
+8,Product Launch Campaign,Planning the marketing campaign for a new product.,Charlie,High,To Do,Marketing,2025-03-18 13:30:00,2025-03-30 12:00:00,server,server,,,2025-07-10
+9,QA Automation,Implementing automated testing for software projects.,Echo,Medium,In Progress,Development,2025-03-25 12:00:00,2025-03-30 12:00:00,server,server,2025-03-28,,2025-05-30
+10,Customer Feedback Analysis,Analyzing customer survey data for insights.,Foxtrot,Low,Completed,Development,2025-02-15 09:30:00,2025-03-30 12:00:00,server,server,2025-02-20,2025-03-25,2025-03-30
+11,Vendor Contract Review,Reviewing and renegotiating vendor contracts.,Delta,Medium,In Progress,Finance,2025-03-21 10:00:00,2025-03-30 12:00:00,server,server,2025-03-25,,2025-07-01
+12,Employee Wellness Program,Developing initiatives for employee well-being.,Gamma,Low,To Do,Operations,2025-03-29 15:00:00,2025-03-30 12:00:00,server,server,,,2025-12-01

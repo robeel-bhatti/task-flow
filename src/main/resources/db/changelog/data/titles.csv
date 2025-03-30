@@ -1,0 +1,4 @@
+title,description,created_at,modified_at,created_by,modified_by
+Admin,System administrator,2024-03-29 10:00:00,2024-03-29 10:00:00,system,system
+Manager,Oversees department,2024-03-29 10:05:00,2024-03-29 10:05:00,system,system
+Employee,Regular staff member,2024-03-29 10:10:00,2024-03-29 10:10:00,system,system
