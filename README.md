@@ -3,6 +3,16 @@
 > "OPTIONAL" in this document are to be interpreted as described in
 > RFC 2119.
 
+# Purpose
+
+The purpose of this personal project is for me to practice and gain experience using Angular's signal store over 
+using `RxJS` and `Observables` to manage application state. 
+
+This project aims to explore the benefits and potential improvements in state management and reactivity that Angular's 
+signal store can offer compared to the traditional `RxJS` approach.
+
+I still plan on using `RxJS` for handling asynchronous operations, such as HTTP requests.
+
 # Task Flow
 
 Task Flow is a task management application with the purpose of making task management
