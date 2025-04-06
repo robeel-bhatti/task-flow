@@ -1,14 +1,14 @@
 > The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL
-> NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED",  "MAY", and
+> NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED", "MAY", and
 > "OPTIONAL" in this document are to be interpreted as described in
 > RFC 2119.
 
 # Purpose
 
-The purpose of this personal project is for me to practice and gain experience using Angular's signal store over 
-using `RxJS` and `Observables` to manage application state. 
+The purpose of this personal project is for me to practice and gain experience using Angular's signal store over
+using `RxJS` and `Observables` to manage application state.
 
-This project aims to explore the benefits and potential improvements in state management and reactivity that Angular's 
+This project aims to explore the benefits and potential improvements in state management and reactivity that Angular's
 signal store can offer compared to the traditional `RxJS` approach.
 
 I still plan on using `RxJS` for handling asynchronous operations, such as HTTP requests.
@@ -16,14 +16,14 @@ I still plan on using `RxJS` for handling asynchronous operations, such as HTTP 
 # Task Flow
 
 Task Flow is a task management application with the purpose of making task management
-as efficient and seamless as possible for employees, managers, and admins. 
+as efficient and seamless as possible for employees, managers, and admins.
 
 This is a full-stack _monolith_ application.
 
 # Tech Stack
 
 | Component           | Technology                        | Version  |
-|---------------------|-----------------------------------|----------|
+| ------------------- | --------------------------------- | -------- |
 | Frontend            | Angular                           | `latest` |
 | Backend             | Spring Boot                       | `latest` |
 | Database            | PostgresSQL                       | `latest` |
