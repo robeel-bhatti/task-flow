@@ -1,0 +1,14 @@
+{
+  "name": "dev-tooling",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "prepare": "husky"
+  },
+  "devDependencies": {
+    "husky": "^9.1.7",
+    "@commitlint/cli": "^19.8.0",
+    "@commitlint/config-conventional": "^19.8.0",
+    "commitlint": "^19.8.0"
+  }
+}

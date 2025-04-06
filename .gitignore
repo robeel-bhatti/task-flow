@@ -45,6 +45,7 @@ build/
 /bazel-out
 
 # Node
+node_modules/
 task-flow/node_modules/
 npm-debug.log
 yarn-error.log
