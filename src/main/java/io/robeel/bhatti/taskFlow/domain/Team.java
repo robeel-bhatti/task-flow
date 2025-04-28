@@ -7,13 +7,11 @@ import jakarta.persistence.Table;
 import lombok.Getter;
 import lombok.Setter;
 
-import java.time.Instant;
-
 @Getter
 @Setter
 @Entity
 @Table(name = "teams", schema = "task_flow")
-public class Team {
+public class Team extends Auditable {
 
     @Id
     @Column(name = "team", nullable = false, length = 20)
@@ -21,17 +19,5 @@ public class Team {
 
     @Column(name = "description", nullable = false, length = 256)
     private String description;
-
-    @Column(name = "created_at", nullable = false)
-    private Instant createdAt;
-
-    @Column(name = "modified_at", nullable = false)
-    private Instant modifiedAt;
-
-    @Column(name = "created_by", nullable = false, length = 256)
-    private String createdBy;
-
-    @Column(name = "modified_by", nullable = false, length = 256)
-    private String modifiedBy;
 
 }

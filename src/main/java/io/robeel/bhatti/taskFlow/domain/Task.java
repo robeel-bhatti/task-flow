@@ -4,14 +4,13 @@ import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
-import java.time.Instant;
 import java.time.LocalDate;
 
 @Getter
 @Setter
 @Entity
 @Table(name = "tasks", schema = "task_flow")
-public class Task {
+public class Task extends Auditable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -45,17 +44,4 @@ public class Task {
 
     @Column(name = "completed_at")
     private LocalDate completedAt;
-
-    @Column(name = "created_at", nullable = false)
-    private Instant createdAt;
-
-    @Column(name = "modified_at", nullable = false)
-    private Instant modifiedAt;
-
-    @Column(name = "created_by", nullable = false, length = 256)
-    private String createdBy;
-
-    @Column(name = "modified_by", nullable = false, length = 256)
-    private String modifiedBy;
-
 }

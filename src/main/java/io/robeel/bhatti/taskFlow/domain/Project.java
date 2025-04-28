@@ -4,14 +4,13 @@ import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
-import java.time.Instant;
 import java.time.LocalDate;
 
 @Getter
 @Setter
 @Entity
 @Table(name = "projects", schema = "task_flow")
-public class Project {
+public class Project extends Auditable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -39,18 +38,6 @@ public class Project {
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "category")
     private Category category;
-
-    @Column(name = "created_at", nullable = false)
-    private Instant createdAt;
-
-    @Column(name = "modified_at", nullable = false)
-    private Instant modifiedAt;
-
-    @Column(name = "created_by", nullable = false, length = 256)
-    private String createdBy;
-
-    @Column(name = "modified_by", nullable = false, length = 256)
-    private String modifiedBy;
 
     @Column(name = "started_at")
     private LocalDate startedAt;
