@@ -14,6 +14,7 @@ import java.time.Instant;
 @Entity
 @Table(name = "titles", schema = "task_flow")
 public class Title {
+
     @Id
     @Column(name = "title", nullable = false, length = 20)
     private String title;

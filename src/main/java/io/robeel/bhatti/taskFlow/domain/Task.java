@@ -12,7 +12,9 @@ import java.time.LocalDate;
 @Entity
 @Table(name = "tasks", schema = "task_flow")
 public class Task {
+
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id", nullable = false)
     private Long id;
 

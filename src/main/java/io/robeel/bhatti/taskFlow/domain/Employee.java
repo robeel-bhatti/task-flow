@@ -11,7 +11,9 @@ import java.time.Instant;
 @Entity
 @Table(name = "employees", schema = "task_flow")
 public class Employee {
+
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id", nullable = false)
     private Long id;
 
@@ -28,11 +30,11 @@ public class Employee {
 
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
     @JoinColumn(name = "title", nullable = false)
-    private io.robeel.bhatti.taskFlow.domain.Title title;
+    private Title title;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "team")
-    private io.robeel.bhatti.taskFlow.domain.Team team;
+    private Team team;
 
     @Column(name = "created_at", nullable = false)
     private Instant createdAt;

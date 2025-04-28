@@ -12,7 +12,9 @@ import java.time.LocalDate;
 @Entity
 @Table(name = "projects", schema = "task_flow")
 public class Project {
+
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id", nullable = false)
     private Long id;
 
@@ -24,7 +26,7 @@ public class Project {
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "team")
-    private io.robeel.bhatti.taskFlow.domain.Team team;
+    private Team team;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "priority")
@@ -32,7 +34,7 @@ public class Project {
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "status")
-    private io.robeel.bhatti.taskFlow.domain.Status status;
+    private Status status;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "category")
