@@ -18,20 +18,16 @@ public class Employee extends Auditable {
     @Column(name = "name", nullable = false, length = 256)
     private String name;
 
-    @ManyToOne(fetch = FetchType.LAZY, optional = false)
-    @JoinColumn(name = "address_id", nullable = false)
-    private Address address;
+    @Column(name = "address_id", nullable = false)
+    private Long addressId;
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "manager_id")
-    private Employee manager;
+    @Column(name = "manager_id")
+    private Long managerId;
 
-    @ManyToOne(fetch = FetchType.LAZY, optional = false)
-    @JoinColumn(name = "title", nullable = false)
-    private Title title;
+    @Column(name = "title", nullable = false)
+    private String title;
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "team")
-    private Team team;
+    @Column(name = "team")
+    private String team;
 
 }

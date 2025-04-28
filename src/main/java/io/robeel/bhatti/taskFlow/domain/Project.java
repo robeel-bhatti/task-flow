@@ -23,21 +23,17 @@ public class Project extends Auditable {
     @Column(name = "description", length = 256)
     private String description;
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "team")
-    private Team team;
+    @Column(name = "team")
+    private String team;
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "priority")
-    private Priority priority;
+    @Column(name = "priority")
+    private String priority;
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "status")
-    private Status status;
+    @Column(name = "status")
+    private String status;
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "category")
-    private Category category;
+    @Column(name = "category")
+    private String category;
 
     @Column(name = "started_at")
     private LocalDate startedAt;

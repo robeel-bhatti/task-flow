@@ -23,21 +23,17 @@ public class Task extends Auditable {
     @Column(name = "description", nullable = false, length = 256)
     private String description;
 
-    @ManyToOne(fetch = FetchType.LAZY, optional = false)
-    @JoinColumn(name = "project_id", nullable = false)
-    private Project project;
+    @Column(name = "project_id", nullable = false)
+    private Long projectId;
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "priority")
-    private Priority priority;
+    @Column(name = "priority")
+    private String priority;
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "status")
-    private Status status;
+    @Column(name = "status")
+    private String status;
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "employee_id")
-    private Employee employee;
+    @Column(name = "employee_id")
+    private Long employeeId;
 
     @Column(name = "due_at", nullable = false)
     private LocalDate dueAt;
