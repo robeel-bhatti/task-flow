@@ -1,5 +1,3 @@
 databaseChangeLog:
   - includeAll:
       path: /db/changelog/changelog-tables/
-  - includeAll:
-      path: /db/changelog/data/
