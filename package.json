@@ -1,6 +1,7 @@
 {
-  "name": "dev-tooling",
-  "private": true,
+  "name": "@rb-tech/task-flow",
+  "version": "1.0.0",
+  "private": false,
   "type": "module",
   "scripts": {
     "prepare": "husky"
