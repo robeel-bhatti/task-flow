@@ -9,5 +9,5 @@ import { version } from 'packageJson';
 })
 export class FooterComponent {
 
-  appVersion = version;
+  appVersion: string = version;
 }
