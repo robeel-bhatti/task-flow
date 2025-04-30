@@ -10,3 +10,13 @@ body {
   height: 100%;
   font-family: Roboto, sans-serif;
 }
+
+.app__header_footer__shared {
+  background-color: #1e293b;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
