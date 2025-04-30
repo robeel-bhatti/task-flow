@@ -5,9 +5,11 @@ import { AppComponent } from './app/app.component';
 bootstrapApplication
 (
   AppComponent,
-  appConfig)
-  .catch((
+  appConfig
+)
+  .catch(
+    (
     err) =>
   console
-    .error( err)
+    .error( err )
 );
