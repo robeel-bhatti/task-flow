@@ -1,4 +1,5 @@
 /src
+/node_modules
 /task-flow/.vscode
 /task-flow/node_modules
 *.json
