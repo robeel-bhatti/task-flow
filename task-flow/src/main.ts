@@ -6,7 +6,8 @@ bootstrapApplication
 (
   AppComponent,
   appConfig)
-  .catch((err) =>
+  .catch((
+    err) =>
   console
-    .error( err),
+    .error( err)
 );
