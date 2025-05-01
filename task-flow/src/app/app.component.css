@@ -1,0 +1,15 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.app__main_content {
+  background-color: #d0cac1;
+  height: 80%;
+}
+
+.app__header,
+.app__footer {
+  height: 10%;
+}
